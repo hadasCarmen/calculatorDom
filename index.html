@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מחשבון עם Cursor אנימציה</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator-container">
+  <h2>🧮 מחשבון עם Cursor אנימציה 🎮</h2>
+
+  <div class="input-section">
+    <input id="num1" type="number" placeholder="מספר 1">
+    <input id="num2" type="number" placeholder="מספר 2">
+  </div>
+
+  <div class="button-section">
+    <button class="calc" data-op="+" data-cursor="➕">+</button>
+    <button class="calc" data-op="-" data-cursor="➖">-</button>
+    <button class="calc" data-op="*" data-cursor="✖️">*</button>
+    <button class="calc" data-op="/" data-cursor="➗">/</button>
+  </div>
+
+  <div class="button-section">
+    <button id="reset">🔄 Reset</button>
+  </div>
+
+  <div id="result"></div>
+  <div id="history"></div>
+</div>
+
+<div id="customCursor" class="emoji-cursor"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
