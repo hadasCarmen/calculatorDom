@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎮 נחש את המספר</title>
+<link rel="stylesheet" href="game.css">
+</head>
+<body>
+
+<div class="game-container">
+  <h1>🎯 נחש את המספר</h1>
+  
+  <div class="stats-section">
+    <div class="stat">
+      <span class="stat-label">נקודות נותרות:</span>
+      <span id="points" class="stat-value">10</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">שיא אישי:</span>
+      <span id="bestScore" class="stat-value">0</span>
+    </div>
+  </div>
+
+  <div class="welcome-message" id="welcomeMessage"></div>
+
+  <div class="settings-section">
+    <div class="setting-group">
+      <label for="minRange">מינימום:</label>
+      <input type="number" id="minRange" value="1" min="1">
+    </div>
+    <div class="setting-group">
+      <label for="maxRange">מקסימום:</label>
+      <input type="number" id="maxRange" value="30" min="2">
+    </div>
+    <div class="setting-group">
+      <label for="maxGuesses">כמות ניחושים:</label>
+      <input type="number" id="maxGuesses" value="10" min="1">
+    </div>
+    <button id="applySettings" class="settings-btn">החל הגדרות</button>
+  </div>
+
+  <div class="game-area">
+    <div class="range-display">
+      <span>נחש מספר בין <span id="rangeMin">1</span> ל-<span id="rangeMax">30</span></span>
+    </div>
+
+    <div class="input-section">
+      <input type="number" id="guessInput" placeholder="הכנס ניחוש" min="1" max="30">
+      <button id="checkBtn" class="check-btn">בדוק ✓</button>
+    </div>
+
+    <div id="message" class="message"></div>
+
+    <div class="history-section">
+      <h3>📜 היסטוריית ניחושים</h3>
+      <div id="guessHistory" class="guess-history"></div>
+    </div>
+  </div>
+
+  <button id="playAgainBtn" class="play-again-btn">שחק שוב 🔄</button>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
